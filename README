@@ -1,0 +1,18 @@
+Compile (it does not need any dependency):
+make
+
+Execute:
+./sprites_test
+
+Test:
+1. Compile the program
+2. Configure the display to 1080p50 o 1080p60 (screen0_output_mode = 9 or screen0_output_mode = 10 in script.fex)
+3. Generate the script.bin using sunxi-tools
+4. Replace script.bin in boot partition
+5. Reboot
+6. Play a video using any supported player (e.g. mplayer)
+7. Simultaneously run ./sprites_test
+
+The program just opens the sprite layer for 10 seconds (it does not need to draw nothing to it).
+If all is ok, the video will continue playing normally.
+If not, you will see the shaking screen for 10 seconds.
